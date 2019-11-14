@@ -11,14 +11,29 @@
         <scene sceneID="idQ-J3-vCR">
             <objects>
                 <viewController id="sBq-dp-QEZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7LQ-zt-WGj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="7LQ-zt-WGj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yva-E4-gan">
+                                <rect key="frame" x="180" y="406" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="0mM-c5-yQZ" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="eQt-fX-DyA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.50645516696924731" green="1" blue="0.53495406948866631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yva-E4-gan" firstAttribute="centerX" secondItem="7LQ-zt-WGj" secondAttribute="centerX" id="uY4-CE-A9Z"/>
+                            <constraint firstItem="yva-E4-gan" firstAttribute="centerY" secondItem="7LQ-zt-WGj" secondAttribute="centerY" id="y20-TA-Eth"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GqI-19-TuY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CEb-81-0Fl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrJ-Wd-LKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0mM-c5-yQZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4993" y="-1752"/>
         </scene>
@@ -33,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuA-gD-p8A">
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="B4e-fW-HEC" kind="show" id="ynq-rM-EbL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.53191663711934511" blue="0.56250991175502252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,11 +70,25 @@
             <objects>
                 <viewController id="B4e-fW-HEC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LBM-WU-uyB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-C0-9fe">
+                                <rect key="frame" x="184" y="406" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="sBq-dp-QEZ" kind="show" id="GBY-Pz-vLC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.94259212509054269" blue="0.37186264854127449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vF5-C0-9fe" firstAttribute="centerY" secondItem="LBM-WU-uyB" secondAttribute="centerY" id="8DR-Zm-lE2"/>
+                            <constraint firstItem="vF5-C0-9fe" firstAttribute="centerX" secondItem="LBM-WU-uyB" secondAttribute="centerX" id="lWo-08-Qlw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4wo-qJ-O70"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3AZ-aH-Q9o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVu-9N-P9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
